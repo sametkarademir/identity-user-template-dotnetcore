@@ -1,0 +1,53 @@
+﻿services:
+  s_identity_user_webapi:
+    image: i_identity_user_webapi
+    container_name: c_identity_user_webapi
+    depends_on:
+      - c_identity_user_postgresqldb
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=c_identity_user_postgresqldb;Port=5432;Database=identity-user-service-db;User Id=admin;Password=P@ssw0rd;
+      - Identity__AccessFailedCount=5
+      - Identity__ClientUrl=http://localhost:5000
+      - Identity__ConfirmEmailPath=confirm-email
+      - Identity__ResetPasswordPath=reset-password
+      - Identity__ApplicationName=Identity User
+      - JWT__Key=50488eb4944b1ede9c7e5db1af4dd5a08521fab2617b075b698f4e923a1adb550d22a1f87a06bc12aa272e48d685921b0aed962c1683a7a116bb834bd1975294
+      - JWT__ExpiresInMinutes=60
+      - JWT__RefreshTokenExpiresInDays=1
+      - JWT__Issuer=https://identity-user.example.com
+      - FeatureToggles__IsRegisterActionEnabled=true
+      - FeatureToggles__IsConfirmEmailActionEnabled=true
+      - FeatureToggles__IsForgotUsernameOrPasswordActionEnabled=true
+      - FeatureToggles__IsResetPasswordActionEnabled=true
+      - RabbitMq__Host=localhost
+      - RabbitMq__UserName=admin
+      - RabbitMq__Password=P@ssw0rd
+      - RabbitMq__Port=5672
+      - Email__Configuration__AuthenticationRequired=true
+      - Email__Configuration__Server=smtp.example.com
+      - Email__Configuration__Port=587
+      - Email__Configuration__SenderName=Identity User
+      - Email__Configuration__SenderEmail=info@example.com
+      - Email__Configuration__Username=info@example.com
+      - Email__Configuration__Password=P@ssw0rd
+    ports:
+      - "5000:8080"
+      - "5001:8081"
+    build:
+      context: .
+      dockerfile: src/WebApi/Dockerfile 
+  s_identity_user_postgresqldb:
+    container_name: c_identity_user_postgresqldb
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      #      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=P@ssw0rd
+    ports:
+      - '5432:5432'
+    volumes:
+      - data:/var/lib/postgresql/data
+
+volumes:
+  data:
