@@ -1,9 +1,8 @@
 using Microsoft.EntityFrameworkCore.Storage;
 using Persistence.Contexts;
-using Persistence.Repositories.Concrete;
 using Persistence.Repositories.Interface;
 
-namespace Money.Map.Persistence.Repositories.Concrete;
+namespace Persistence.Repositories.Concrete;
 
 public class Uow(BaseDbContext context) : IUow
 {
