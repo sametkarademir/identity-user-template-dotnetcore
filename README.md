@@ -13,7 +13,7 @@ This project is a .NET Core API for user and role management, built using Micros
 
 ## Technologies
 
-- **.NET Core 6**
+- **.NET Core 8**
 - **Microsoft Identity**
 - **Entity Framework Core**
 - **PostgreSQL**
@@ -32,8 +32,8 @@ To run this project locally, follow the steps below.
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-repo/identity-user-service.git
-cd identity-user-service
+git clone https://github.com/sametkarademir/identity-user-template-dotnetcore.git
+cd identity-user-template-dotnetcoreg
 ```
 
 ### 2. Build and run the Docker containers
