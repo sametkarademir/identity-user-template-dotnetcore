@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\EventBus.AzureServiceBus\EventBus.AzureServiceBus.csproj" />
+      <ProjectReference Include="..\EventBus.Base\EventBus.Base.csproj" />
+      <ProjectReference Include="..\EventBus.RabbitMq\EventBus.RabbitMq.csproj" />
+    </ItemGroup>
+
+</Project>
