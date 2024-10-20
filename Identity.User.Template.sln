@@ -1,8 +1,31 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{63407CD6-B16F-4448-8A38-427DFCC52E9E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{6A959014-6605-4A34-A168-205BB1A98CB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.EntityFramework", "src\Core\Core.EntityFramework\Core.EntityFramework.csproj", "{D140C2E3-3462-45F2-9C1F-6F93A5F48A4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Exceptions", "src\Core\Core.Exceptions\Core.Exceptions.csproj", "{8BCDF8A6-180B-4A58-85FB-74C98384DE8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6A959014-6605-4A34-A168-205BB1A98CB6} = {63407CD6-B16F-4448-8A38-427DFCC52E9E}
+		{D140C2E3-3462-45F2-9C1F-6F93A5F48A4C} = {6A959014-6605-4A34-A168-205BB1A98CB6}
+		{8BCDF8A6-180B-4A58-85FB-74C98384DE8E} = {6A959014-6605-4A34-A168-205BB1A98CB6}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D140C2E3-3462-45F2-9C1F-6F93A5F48A4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D140C2E3-3462-45F2-9C1F-6F93A5F48A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D140C2E3-3462-45F2-9C1F-6F93A5F48A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D140C2E3-3462-45F2-9C1F-6F93A5F48A4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BCDF8A6-180B-4A58-85FB-74C98384DE8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BCDF8A6-180B-4A58-85FB-74C98384DE8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BCDF8A6-180B-4A58-85FB-74C98384DE8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BCDF8A6-180B-4A58-85FB-74C98384DE8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
