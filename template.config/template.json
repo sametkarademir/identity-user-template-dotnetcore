@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Samet", 
+    "classifications": ["WebAPI", "CQRS", "Clean Architecture"], 
+    "identity": "Identity.User.Template", 
+    "name": "Identity User Template", 
+    "shortName": "identity-user-template",
+    "tags": { 
+      "language": "C#" 
+    },
+    "sourceName": "Identity.User.Template", 
+    "preferNameDirectory": true
+  }
+  
